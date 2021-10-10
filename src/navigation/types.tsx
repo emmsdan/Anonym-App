@@ -29,8 +29,10 @@ export type RootStackScreenProps<
 
 export type RootTabParamList = {
   Signup: undefined;
+  Register: undefined;
   Login: undefined;
   OTPVerification: undefined;
+  CreatePin: undefined;
   Welcome: undefined;
 };
 
