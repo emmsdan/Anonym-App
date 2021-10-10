@@ -1,22 +1,17 @@
 import * as React from "react";
-import {
-  Image,
-  Platform,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import Colors from "../../constants/Colors";
-import { LinearGradient } from "expo-linear-gradient";
 
 import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from "react-native-responsive-screen";
 import { Button } from "../../components/Themed";
+import { useNavigation } from "@react-navigation/native";
+
 export default function WelcomeScreen() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -33,10 +28,25 @@ export default function WelcomeScreen() {
         </Text>
 
         <View>
-          <Button text={"Login"} />
+          <Button
+            text={"Login"}
+            outline
+            color={Colors.warning2}
+            onPress={() => navigation.navigate("Login")}
+          />
           <View style={{ padding: 5 }} />
-          <Button text={"Register"} invert />
-
+          <Button
+            text={"PIN"}
+            rounded={true}
+            color={Colors.warning2}
+            onPress={() => navigation.navigate("CreatePin")}
+          />
+          <View style={{ padding: 5 }} />
+          <Button
+            onPress={() => navigation.navigate("Register")}
+            text={"Register"}
+            outline
+          />
         </View>
       </View>
     </View>
