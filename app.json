@@ -8,9 +8,9 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./src/assets/images/splash.png",
+      "image": "./src/assets/images/splash-2.png",
       "resizeMode": "cover",
-      "backgroundColor": "#000"
+      "backgroundColor": "#17202A"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +22,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/icon.png",
-        "backgroundColor": "#000"
+        "backgroundColor": "#17202A"
       }
     },
     "web": {
